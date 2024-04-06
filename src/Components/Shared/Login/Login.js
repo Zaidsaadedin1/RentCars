@@ -6,10 +6,12 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
-const LoginPage = ({ navigation }) => {
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigation = useNavigation();
 
   const handleLogin = () => {
     // Perform login logic here, e.g., send login request to server
@@ -35,8 +37,11 @@ const LoginPage = ({ navigation }) => {
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate("Register")}>
-        <Text style={styles.link}>Don't have an account? Register here</Text>
+      <TouchableOpacity
+        style={styles.link}
+        onPress={() => navigation.navigate("Register")}
+      >
+        <Text>Don't have an account? Register here</Text>
       </TouchableOpacity>
     </View>
   );
@@ -80,4 +85,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LoginPage;
+export default Login;

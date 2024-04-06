@@ -14,6 +14,7 @@ const Register = ({ navigation }) => {
   const handleRegister = () => {
     // Perform register logic here, e.g., send registration request to server
     console.log("Registering with:", email, password);
+    return navigation.navigate("HomePage");
   };
 
   return (

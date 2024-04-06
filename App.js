@@ -1,14 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import AppNavigationContainer from "./src/Containers/NavigationContainer/NavigationContainer";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <Text>HI</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+  return <AppNavigationContainer />;
 }
 
 const styles = StyleSheet.create({
